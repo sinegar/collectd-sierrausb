@@ -87,6 +87,7 @@ class SierraSerial:
 
         if status != '':
             #collectd.info(str(status.split()))
+            # quick and dirty ugly parsing of AT command output...
             list = status.split()
             ndx = list.index('Temperature:')
             temperature = float(list[ndx + 1])
